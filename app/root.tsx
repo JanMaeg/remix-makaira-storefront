@@ -9,10 +9,14 @@ import {
 } from "@remix-run/react";
 import { DynamicLinks } from "remix-utils";
 
-import styles from "~/styles/fonts.css";
+import fontStyles from "~/styles/fonts.css";
+import globalStyles from "~/styles/globals.css";
 
 export function links() {
-  return [{ rel: "stylesheet", href: styles }];
+  return [
+    { rel: "stylesheet", href: fontStyles },
+    { rel: "stylesheet", href: globalStyles },
+  ];
 }
 
 export const meta: MetaFunction = () => ({

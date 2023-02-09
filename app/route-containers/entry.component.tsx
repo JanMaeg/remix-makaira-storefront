@@ -5,15 +5,18 @@ import ListingPage, { links as listingPageLinks } from "~/pages/ListingPage";
 import type { FunctionComponent } from "react";
 import type { DynamicLinksFunction } from "remix-utils";
 import type { SerializeFrom } from "@remix-run/node";
+import Header, { links as headerLinks } from "~/components/Header/Header";
 
 let dynamicLinks: DynamicLinksFunction<SerializeFrom<typeof loader>> = ({
   data,
 }) => {
-  if (data.type === "category") {
+  if (data.page.type === "category") {
     return [...listingPageLinks()];
   }
   return [];
 };
+
+export const links = () => [...headerLinks()];
 
 export let handle = { dynamicLinks };
 
@@ -34,12 +37,14 @@ const PAGES: PageMapping = {
 function Page() {
   const makaira = useLoaderData<typeof loader>();
 
-  const Component = PAGES[makaira.type];
+  const Component = PAGES[makaira.page.type];
 
-  const data = makaira.data as MakairaData;
+  const data = makaira.page.data;
 
   return (
     <div>
+      <Header menu={makaira.menu} />
+
       <Component data={data} />
     </div>
   );

@@ -5,6 +5,27 @@
     src: url('/fonts/roboto/Roboto-Regular.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    src: url('/fonts/poppins/Poppins-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fonts/poppins/Poppins-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    src: url('/fonts/poppins/Poppins-Medium.ttf') format('truetype');
+}
+
 * {
-    font-family: "Roboto";
+    font-family: "Poppins";
 }

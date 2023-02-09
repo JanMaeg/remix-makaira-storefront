@@ -1,0 +1,17 @@
+:root {
+    --spacer-four-xs: 2px;
+    --spacer-three-xs: 4px;
+    --spacer-xxs: 8px;
+    --spacer-xs: 12px;
+    --spacer-s: 16px;
+    --spacer-m: 20px;
+    --spacer-l: 24px;
+    --spacer-xl: 32px;
+    --spacer-xxl: 48px;
+    --spacer-three-xl: 64px;
+}
+
+body {
+    margin: 0;
+    font-size: 14px;
+}

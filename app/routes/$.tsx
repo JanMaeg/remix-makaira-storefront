@@ -1,9 +1,12 @@
-import PageComponent, { handle } from "~/route-containers/entry.component";
+import PageComponent, {
+  handle,
+  links,
+} from "~/route-containers/entry.component";
 import { loader } from "~/route-containers/entry.server";
 import { useCatch } from "@remix-run/react";
 
 export default PageComponent;
-export { loader, handle };
+export { loader, handle, links };
 
 export function CatchBoundary() {
   const caught = useCatch();
